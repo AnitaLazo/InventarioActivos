@@ -25,7 +25,7 @@ namespace ActivosCatalogApi.Domain
         public decimal Precio_actual { get; set; }
 
         public int TipoActivosID { get; set; }
-        public virtual List<TipoActivos> TipoActivos { get; set; }
+        //public TipoActivos TipoActivos { get; set; }
 
 
     }

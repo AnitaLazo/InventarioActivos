@@ -25,8 +25,8 @@ namespace ActivosCatalogApi
                 try
                 {
                     var context = services.GetRequiredService<ActivosContext>();
-                    //ActivosSeed.SeedAsync(context).Wait();
-                    ActivosSeed.SeedAsync(context);
+                    ActivosSeed.SeedAsync(context).Wait();
+                   // ActivosSeed.SeedAsync(context);
                 }catch(Exception ex)
                 {
                     var logger = services.GetRequiredService<ILogger<Program>>();

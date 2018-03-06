@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ActivosCatalogApi.Data;
 using ActivosCatalogApi.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace INVENTARIO.Services.ActivosCatalogApi.Data
 {
@@ -15,6 +16,8 @@ namespace INVENTARIO.Services.ActivosCatalogApi.Data
 
       //  public static void SeedAsync(ActivosContext context)
         {
+            //esto sirve para que se cree la migracion automaticamente
+            context.Database.Migrate();
             if (!context.TipoActivos.Any())
             {
                 context.TipoActivos.AddRange(GetPreconfiguredTipoActivos());
